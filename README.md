@@ -20,3 +20,23 @@ GoCityGame is a city simulation game made by Patric Vormstein.
  * For Sublime: If not yet done set **$GOROOT** and **$GOPATH**
  * Run the project in terminal with the command "*go run webapp.go*"
  * Every time, wehen code completion needs to get updated run *install_pkg.bat*
+
+## Structure
+
+```
+project/
+├── app/
+│   ├── controller/
+|   |      ^ "Contains all the controller logic"
+│   ├── models/
+|   |      ^ "Contains all data models"
+|   ├── views/
+|   |      ^ "Contains all views and templating functions"
+├── dev/
+│   ├── migrations/
+|   |      ^ "Contains migrations for populating database and tests"
+├── static/
+│   |  ^ "Static content like js, img, css"
+├── util/
+│   |  ^ "Database connector and project configuration"
+```
