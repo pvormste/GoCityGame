@@ -1,0 +1,22 @@
+{{define "head"}}
+<title>405: Request Not Allowed</title>
+{{end}}
+
+{{define "content"}}
+<div class="container top-distance">
+	<div class="col-md-12">
+		<div class="panel panel-danger">
+			<div class="panel-heading"><h2 class="panel-title">Oops! Hier lief etwas schief! -- {{.Code}}</h3></div>
+			<div class="panel-body">
+				<p>Es scheint so, als wäre ein Fehler aufgetreten. Keine Sorge, überprüfe deine Angaben und versuche es erneut. Es sollte 
+				schon bald wieder funktionieren.</p>
+				<p>Sollte es weiterhin nicht funktionieren wären wir dir sehr dankbar, 
+				wenn du uns den Fehler mit einer genauen Fehlerberschreibung und der Art und Weise der Reproduktion 
+				mitteilen könntest. Bitte verwende auch den unten angegebenen Fehlercode. </p>
+				<p>Danke!</p>
+				<p class="text-muted"><small>(Error: {{.Code}} {{.Text}})</small></p>
+			</div>
+		</div>
+	</div>
+</div>
+{{end}}

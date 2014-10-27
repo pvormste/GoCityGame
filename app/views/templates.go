@@ -6,18 +6,27 @@ import (
 )
 
 // Templates-Map
-var Templates map[string]*template.Template
+var templates map[string]*template.Template
+
+// ### Private
 
 // Create Templates with inheritance
 func loadTemplates() {
-	Templates["index"] = createInheritedTemplate("base.tmpl", "index.tmpl")
+	templates["index"] = createInheritedTemplate("base.tmpl", "index.tmpl")
+	templates["error"] = createInheritedTemplate("base.tmpl", "error.tmpl")
 }
 
-func createInheritedTemplate(base string, child string) (t *template.Template) {
+func createInheritedTemplate(base string, child string) *template.Template {
 	return template.Must(template.ParseFiles("./app/views/"+util.Conf.Tmpl+"/"+child, "./app/views/"+util.Conf.Tmpl+"/"+base))
 }
 
 func init() {
-	Templates = make(map[string]*template.Template)
+	templates = make(map[string]*template.Template)
 	loadTemplates()
+}
+
+// ### Public
+
+func GetTemplate(name string) *template.Template {
+	return templates[name]
 }
