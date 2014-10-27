@@ -1,0 +1,15 @@
+{
+  "name": "gocitygame",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pvormste/GoCityGame",
+  "authors": [
+    "Patric Vormstein <patric@vormstein.de>"
+  ],
+  "description": "City Simulation Game",
+  "main": "webapp.go",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootflat": "*"
+  }
+}

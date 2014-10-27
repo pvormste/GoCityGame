@@ -1,0 +1,8 @@
+{
+	"directory": "static/lib",
+	"storage": {
+		"packages": "bower/.bower-cache",
+		"registry": "bower/.bower-registry"
+	},
+	"tmp": "bower/.bower-tmp"
+}

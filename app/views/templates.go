@@ -10,7 +10,7 @@ var Templates map[string]*template.Template
 
 // Create Templates with inheritance
 func loadTemplates() {
-	Templates["index.html"] = createInheritedTemplate("base.tmpl", "index.tmpl")
+	Templates["index"] = createInheritedTemplate("base.tmpl", "index.tmpl")
 }
 
 func createInheritedTemplate(base string, child string) (t *template.Template) {
