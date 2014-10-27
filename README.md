@@ -10,6 +10,7 @@ GoCityGame is a city simulation game made by Patric Vormstein.
  * Create the folders **$GOPATH/src** and **$GOPATH/src/vormstein.eu**
  * Clone repository insinde **$GOPATH/src/vormstein.eu**
  * On Windows: Run *install_pkg.bat* for code completion
+ * Run "*[go get gopkg.in/mgo.v2](https://labix.org/mgo)*" and "*[go get github.com/gorilla/mux](https://labix.org/mgo)*"
  
  
 ## Coding practices
@@ -19,7 +20,7 @@ GoCityGame is a city simulation game made by Patric Vormstein.
  * For Sublime: Press Ctrl + Shift + P (Win) and select "Install Package" and then **GoSublime**
  * For Sublime: If not yet done set **$GOROOT** and **$GOPATH**
  * Run the project in terminal with the command "*go run webapp.go*"
- * Every time, wehen code completion needs to get updated run *install_pkg.bat*
+ * On Windows: Every time, when code completion needs to get updated run *install_pkg.bat*
 
 ## Structure
 
@@ -30,13 +31,15 @@ project/
 |   |      ^ "Contains all the controller logic"
 │   ├── models/
 |   |      ^ "Contains all data models"
-|   ├── views/
-|   |      ^ "Contains all views and templating functions"
+|   └── views/
+|          ^ "Contains all views and templating functions"
 ├── dev/
-│   ├── migrations/
-|   |      ^ "Contains migrations for populating database and tests"
+│   └── migrations/
+|          ^ "Contains migrations for populating database and tests"
 ├── static/
-│   |  ^ "Static content like js, img, css"
+│      ^ "Static content like js, img, css"
 ├── util/
-│   |  ^ "Database connector and project configuration"
+│      ^ "Database connector and project configuration"
+|
+└── webapp.go "<< Main Entrance"
 ```
