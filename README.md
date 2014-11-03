@@ -27,6 +27,7 @@ GoCityGame is a city simulation game made by Patric Vormstein.
 ```
 project/
 ├── app/
+│   |  ^ "Contains config and database control"
 │   ├── controller/
 |   |      ^ "Contains all the controller logic"
 │   ├── models/
@@ -38,8 +39,6 @@ project/
 |          ^ "Contains migrations for populating database and tests"
 ├── static/
 │      ^ "Static content like js, img, css"
-├── util/
-│      ^ "Database connector and project configuration"
 |
 └── webapp.go "<< Main Entrance"
 ```

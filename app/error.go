@@ -1,4 +1,4 @@
-package util
+package app
 
 type HTTPError struct {
 	Code int
@@ -22,12 +22,13 @@ func init() {
 }
 
 // ### Public
+
 func GetHTTPError(code int) *HTTPError {
 
-	hErr := HTTPError{
+	hErr := &HTTPError{
 		Code: code,
 		Text: errors[code],
 	}
 
-	return &hErr
+	return hErr
 }

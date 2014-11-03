@@ -4,8 +4,8 @@ import (
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
+	"vormstein.eu/gocitygame/app"
 	"vormstein.eu/gocitygame/app/controller"
-	"vormstein.eu/gocitygame/util"
 )
 
 func main() {
@@ -18,9 +18,9 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 
 	// Print an information
-	log.Println("Listening at Port", util.Conf.Port)
+	log.Println("Listening at Port", app.Config.Port)
 
 	// Serve!
 	http.Handle("/", router)
-	http.ListenAndServe(util.Conf.Port, nil)
+	http.ListenAndServe(app.Config.Port, nil)
 }

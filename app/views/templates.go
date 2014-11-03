@@ -1,32 +1,17 @@
 package views
 
 import (
+	"github.com/pvormste/atempgo"
 	"html/template"
-	"vormstein.eu/gocitygame/util"
+	"vormstein.eu/gocitygame/app"
 )
 
-// Templates-Map
-var templates map[string]*template.Template
-
-// ### Private
-
-// Create Templates with inheritance
-func loadTemplates() {
-	templates["index"] = createInheritedTemplate("base.tmpl", "index.tmpl")
-	templates["error"] = createInheritedTemplate("base.tmpl", "error.tmpl")
-}
-
-func createInheritedTemplate(base string, child string) *template.Template {
-	return template.Must(template.ParseFiles("./app/views/"+util.Conf.Tmpl+"/"+child, "./app/views/"+util.Conf.Tmpl+"/"+base))
-}
-
 func init() {
-	templates = make(map[string]*template.Template)
-	loadTemplates()
+	parseOptions := &atempgo.ParseOptions{Ext: "tmpl"}
+
+	atempgo.LoadTemplates("app/views/"+app.Config.Tmpl, parseOptions)
 }
 
-// ### Public
-
-func GetTemplate(name string) *template.Template {
-	return templates[name]
+func GetTemplate(key string) *template.Template {
+	return atempgo.GetTemplate(key)
 }
