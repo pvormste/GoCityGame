@@ -24,3 +24,13 @@ func HandleRegister(w http.ResponseWriter, r *http.Request) {
 		views.NotAllowed(w)
 	}
 }
+
+// Handle for "/login"
+func HandleLogin(w http.ResponseWriter, r *http.Request) {
+	switch r.Method {
+	case "GET":
+		views.GetTemplate("#login").ExecuteTemplate(w, "base", nil)
+	default:
+		views.NotAllowed(w)
+	}
+}

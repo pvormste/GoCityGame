@@ -12,8 +12,10 @@ func main() {
 	router := mux.NewRouter()
 
 	// Routes
+	// ~root
 	router.HandleFunc("/", controller.HandleRoot)
 	router.HandleFunc("/register", controller.HandleRegister)
+	router.HandleFunc("/login", controller.HandleLogin)
 
 	// Static
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
