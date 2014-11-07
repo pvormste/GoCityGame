@@ -2,7 +2,6 @@ package controller
 
 import (
 	"net/http"
-	"vormstein.eu/gocitygame/app"
 	"vormstein.eu/gocitygame/app/views"
 )
 
@@ -12,15 +11,16 @@ func HandleRoot(w http.ResponseWriter, r *http.Request) {
 	case "GET":
 		views.GetTemplate("#index").ExecuteTemplate(w, "base", nil)
 	default:
-		views.GetTemplate("#error").ExecuteTemplate(w, "base", app.GetHTTPError(405))
+		views.NotAllowed(w)
 	}
 }
 
 // Handler for "/register"
-/*func HandleRegister(w http.ResponseWriter, r *http.Request) {
+func HandleRegister(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
-		//
-		default:
+		views.GetTemplate("#register").ExecuteTemplate(w, "base", nil)
+	default:
+		views.NotAllowed(w)
 	}
-}*/
+}

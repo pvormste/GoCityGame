@@ -13,6 +13,7 @@ func main() {
 
 	// Routes
 	router.HandleFunc("/", controller.HandleRoot)
+	router.HandleFunc("/register", controller.HandleRegister)
 
 	// Static
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))

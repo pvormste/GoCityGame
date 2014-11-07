@@ -1,8 +1,22 @@
 body {
   padding-top: 46px;
   padding-bottom: 20px;
+  background: #CCDFE6;
 }
 
 .top-distance {
 	margin-top: 50px;
+}
+
+.box {
+	/*margin: 30px auto;*/
+	background: #fafafa;
+	padding: 15px 15px;
+	border: 1px solid #cfcfcf;
+}
+
+@media (min-width: 992px) {
+	.modal-lg {
+	    width: 900px;
+	}
 }
