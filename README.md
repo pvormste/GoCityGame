@@ -10,7 +10,7 @@ GoCityGame is a city simulation game made by Patric Vormstein.
  * Create the folders **$GOPATH/src** and **$GOPATH/src/vormstein.eu**
  * Clone repository insinde **$GOPATH/src/vormstein.eu**
  * On Windows: Run *install_pkg.bat* for code completion
- * Run "*[go get gopkg.in/mgo.v2](https://labix.org/mgo)*" and "*[go get github.com/gorilla/mux](https://labix.org/mgo)*"
+ * Run "*[go get gopkg.in/mgo.v2](https://labix.org/mgo)*" and "*[go get github.com/gorilla/mux](http://www.gorillatoolkit.org/)*"
  
  
 ## Coding practices
